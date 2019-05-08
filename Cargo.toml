@@ -5,3 +5,4 @@ authors = ["Thomas Campistron <irevoire@hotmail.fr>"]
 edition = "2018"
 
 [dependencies]
+derive_builder = "*"
