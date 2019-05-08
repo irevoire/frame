@@ -1,3 +1,4 @@
+pub mod arp;
 pub mod ether;
 pub mod ipv4;
 
