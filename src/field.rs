@@ -1,4 +1,5 @@
 pub mod ether;
+pub mod ipv4;
 
 pub trait Field {
     fn serialize(&self) -> &[u8];
