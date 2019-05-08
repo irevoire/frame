@@ -1,11 +1,13 @@
 use derive_builder::Builder;
 
+type MacAddr = [u8; 6];
+
 #[repr(packed)]
 #[derive(Builder)]
 struct Ether {
     #[builder(default = "[0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]")] // broadcast
-    dst_addr: [u8; 6],
-    src_addr: [u8; 6],
+    dst_addr: MacAddr,
+    src_addr: MacAddr,
     #[builder(default = "0x0800")] // ipv4
     ether_type: u16,
 }
