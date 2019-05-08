@@ -1,6 +1,6 @@
 use derive_builder::Builder;
 
-type IpAddr = [u8; 4];
+pub type Ipv4Addr = [u8; 4];
 
 #[repr(packed)]
 #[derive(Builder)]
@@ -24,9 +24,9 @@ struct Ipv4 {
     protocol: u8,
     #[builder(default = "0x0000")] // should be updated last
     checksum: u16,
-    src_addr: IpAddr,
+    src_addr: Ipv4Addr,
     #[builder(default = "[0xFF, 0xFF, 0xFF, 0xFF]")] // broadcast
-    dst_addr: IpAddr,
+    dst_addr: Ipv4Addr,
 }
 
 impl crate::field::Field for Ipv4 {

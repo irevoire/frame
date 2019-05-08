@@ -1,6 +1,6 @@
 use derive_builder::Builder;
 
-type MacAddr = [u8; 6];
+pub type MacAddr = [u8; 6];
 
 #[repr(packed)]
 #[derive(Builder)]
