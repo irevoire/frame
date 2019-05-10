@@ -3,9 +3,10 @@
 /// Instead we need a way to allow to implements this function with your own *sized* type
 use derive_builder::Builder;
 
+#[allow(dead_code)]
 #[repr(packed)]
 #[derive(Builder)]
-struct Arp {
+pub struct Arp {
     #[builder(default = "0x0001")] // ethernet
     htype: u16, // hardware type
     #[builder(default = "0x0008")] // ipv4

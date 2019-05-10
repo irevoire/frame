@@ -2,9 +2,10 @@ use derive_builder::Builder;
 
 pub type MacAddr = [u8; 6];
 
+#[allow(dead_code)]
 #[repr(packed)]
 #[derive(Builder)]
-struct Ether {
+pub struct Ether {
     #[builder(default = "[0xFF, 0xFF, 0xFF, 0xFF, 0xFF, 0xFF]")] // broadcast
     dst_addr: MacAddr,
     src_addr: MacAddr,

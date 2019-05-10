@@ -2,9 +2,10 @@ use derive_builder::Builder;
 
 pub type Ipv4Addr = [u8; 4];
 
+#[allow(dead_code)]
 #[repr(packed)]
 #[derive(Builder)]
-struct Ipv4 {
+pub struct Ipv4 {
     /// version 4 bits | ihl 4 bits
     #[builder(default = "0b0100_0101")] // version 4 | header length = 20B
     version_ihl: u8,
