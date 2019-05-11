@@ -47,11 +47,9 @@ mod tests {
             .src_addr([0xaa, 0xbb, 0xcc, 0xdd])
             .build()
             .unwrap();
-        unsafe {
-            assert_eq!(ip.src_addr, [0xaa, 0xbb, 0xcc, 0xdd]);
-            assert_eq!(ip.dst_addr, [0xff, 0xff, 0xff, 0xff]);
-            assert_eq!(ip.protocol, 0x06);
-        }
+        assert_eq!(ip.src_addr, [0xaa, 0xbb, 0xcc, 0xdd]);
+        assert_eq!(ip.dst_addr, [0xff, 0xff, 0xff, 0xff]);
+        assert_eq!(ip.protocol, 0x06);
     }
 
     #[test]
